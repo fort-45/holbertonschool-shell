@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# loop with the until
+i=0
+until [ "$i" -lt 10 ]; do
+echo "Best School"
+((i++));
+done
