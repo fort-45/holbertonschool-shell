@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# clock code
 h=0
 while ((h<=12)); do
 	m=1
