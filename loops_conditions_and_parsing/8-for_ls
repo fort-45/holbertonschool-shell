@@ -2,8 +2,6 @@
 # to file, or not to file
 for filename in *; do
 	if [[ "$filename" == *'-'* ]]; then
-		if [ -f "$filename" ]; then 
-			echo "$filename" | cut -d '-' -f 2-
-		fi
+		echo "$filename" | cut -d '-' -f 2-
 	fi
 done
