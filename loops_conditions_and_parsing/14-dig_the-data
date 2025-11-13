@@ -7,13 +7,4 @@ if [ ! -f "$LOG_FILE" ]; then
     exit 1
 fi
 
-awk '
-{
-    KEY = $1 " " $9
-    COUNT[KEY]++
-}
-END {
-    for (key in COUNT) {
-        print COUNT[key], key
-    }
-}' "$LOG_FILE" | sort -nr
+awk '{print $1, $9}' "$LOG_FILE" | sort | uniq -c | so
