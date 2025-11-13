@@ -4,6 +4,8 @@
 for filename in *; do
     if [[ "$filename" == *'-'* ]]; then
         echo "${filename#*-}"
+    else
+    	echo "$filename"	    
         
     fi
 done
