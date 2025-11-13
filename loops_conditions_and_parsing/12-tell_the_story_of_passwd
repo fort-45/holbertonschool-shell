@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# give the passwd file in a specific format
+
+IFS=':'
+
+while read -r username password user_id group_id user_info home_dir cmd_shell; do
+       if [[ -n "$username" ]]; then 
+       		echo "The user $username is part of the $group_id gang, lives in $home_dir and rides $cmd_shell. $user_id 's place is protected by the passcode $password, more info about the user here: $user_info"; fi
+	done < /etc/passwd		
