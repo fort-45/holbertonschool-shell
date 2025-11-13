@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
 #Apache
 
+
+LOG_FILE="apache-access.log"
+
+if [ ! -f "$LOG_FILE" ]; then
+    echo "Error: The required log file ($LOG_FILE) was not found in the current directory." >&2
+    exit 1
+fi
+
+awk '{print $1, $9}' "$LOG_FILE"
