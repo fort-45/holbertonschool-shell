@@ -3,7 +3,7 @@
 for filename in *; do
 	if [[ "$filename" == *'-'* ]]; then
 		if [ -f "$filename" ]; then 
-			echo "$filename" | cut -d '-' -f 2
+			echo "$filename" | cut -d '-' -f 2-
 		fi
 	fi
 done
