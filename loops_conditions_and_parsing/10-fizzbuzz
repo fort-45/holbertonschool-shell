@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# displays the number from 1 to 100 with some exceptions
+
+c=1
+
+while [ "$c" -le 100 ]; do
+        if (("$c" % 15 == 0)); then
+		echo "FizzBuzz"
+	elif (("$c" % 5 == 0)); then 
+		echo "Buzz"
+	elif (("$c" % 3 == 0)); then
+		echo "Fizz"
+	else 
+		echo "$c"; fi	
+	((c++))
+done
