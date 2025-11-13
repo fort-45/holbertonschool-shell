@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Script: 8-for_ls
+
+for filename in *; do
+    if [[ "$filename" == *'-'* ]]; then
+        echo "${filename#*-}"
+        
+    fi
+done
