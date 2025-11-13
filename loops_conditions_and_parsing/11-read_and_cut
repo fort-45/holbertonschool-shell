@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays the content of file /etc/passwd with the format of username, id, Home directory path for the user
+IFS=':'
+while read -r username password user_id group_id full_name home_dir shell; do
+    if [[ -n "$username" ]]; then
+        echo "${username}:${user_id}:${home_dir}"
+    fi
+done
