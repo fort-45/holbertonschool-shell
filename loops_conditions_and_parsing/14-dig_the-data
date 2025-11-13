@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Dig the data
+LOG_FILE="apache-access.log"
+
+if [ ! -f "$LOG_FILE" ]; then
+    echo "Error: The required log file ($LOG_FILE) was not found in the current directory." >&2
+    exit 1
+fi
+
+awk '
+{
+    KEY = $1 " " $9
+    COUNT[KEY]++
+}
+END {
+    for (key in COUNT) {
+        print COUNT[key], key
+    }
+}' "$LOG_FILE" | sort -nr
