@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 # continuously runs the given words after every 2 seconds untill ctrl+c is pressed.
+STOP_FILE="/tmp/stop_infinity"
+rm -f "$STOP_FILE"
+
 while true; do
-echo 'To infinity and beyond'
-sleep 2 
+	if [ -f "$STOP_FILE" ]; then
+		echo 'Terminated'
+		exit 0
+	fi
+	echo "To infinity and beyond"
+	sleep 2 
 done
