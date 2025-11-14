@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# continuously runs the given words after every 2 seconds untill ctrl+c is pressed.
+while true; do
+echo 'To infinity and beyond'
+sleep 2 
+done
