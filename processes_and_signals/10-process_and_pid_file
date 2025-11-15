@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # i dont know
-PIDFILE="/var/run/myscript.pid"
+PIDFILE="/tmp/myscript.pid"
 
 cleanup() {
     if [ -f "$PIDFILE" ]; then
