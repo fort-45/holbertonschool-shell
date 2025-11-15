@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # very poor
 PID_FILE="/var/run/my_process.pid"
 PROCESS_SCRIPT="$(pwd)/manage_my_process"
