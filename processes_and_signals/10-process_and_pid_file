@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# i dont know
 PIDFILE="/var/run/myscript.pid"
 
 cleanup() {
